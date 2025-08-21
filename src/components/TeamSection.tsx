@@ -1,11 +1,11 @@
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail, Twitter } from "lucide-react";
 
 const founders = [
   {
     name: "Aakash Singh Jaadon",
     role: "CEO",
     bio: "Ex-founder of Testwin (100K+ users). IIT Alumni. Expert in XR product strategy, partnerships, and compliance.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "/aakash.jpeg",
     links: {
       linkedin: "#",
       twitter: "#",
@@ -15,8 +15,8 @@ const founders = [
   {
     name: "Gaurav Purbia",
     role: "CTO",
-    bio: "Ex-founder of LearnXR (no-code XR platform). IIT KGP. Pioneer in XR streaming and education deployments.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    bio: "Ex-founder of LearnXR (no-code XR platform). Raised funds from Meta and Global Incubators Network.",
+    image: "/gaurav.jpeg",
     links: {
       linkedin: "#",
       twitter: "#", 

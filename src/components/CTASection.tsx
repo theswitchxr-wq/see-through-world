@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Mail } from "lucide-react";
 
-export const CTASection = () => {
+interface CTASectionProps {
+  onJoinWaitlist: () => void;
+}
+
+export const CTASection = ({ onJoinWaitlist }: CTASectionProps) => {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background Elements */}
@@ -30,16 +34,20 @@ export const CTASection = () => {
               variant="hero" 
               size="lg"
               className="group px-10 py-6 text-lg"
+              asChild
             >
-              <Calendar className="w-6 h-6 mr-3" />
-              Book a Demo
-              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              <a href="https://cal.com/switchxr/15min" target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-6 h-6 mr-3" />
+                Book a Demo
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <Button 
               variant="glass" 
               size="lg"
               className="px-10 py-6 text-lg"
+              onClick={onJoinWaitlist}
             >
               <Mail className="w-6 h-6 mr-3" />
               Join Waitlist
@@ -51,11 +59,11 @@ export const CTASection = () => {
               Ready to get started? Contact us directly:
             </div>
             <a 
-              href="mailto:admin@theswitch.life"
+              href="mailto:teleport@theswitch.life"
               className="inline-flex items-center gap-2 text-primary hover:text-primary-glow transition-colors font-medium"
             >
               <Mail className="w-4 h-4" />
-              admin@theswitch.life
+              teleport@theswitch.life
             </a>
           </div>
 

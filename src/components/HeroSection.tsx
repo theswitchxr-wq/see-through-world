@@ -1,8 +1,12 @@
+import heroImage from "@/assets/hero-xr-pov.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Eye, Zap } from "lucide-react";
-import heroImage from "@/assets/hero-xr-pov.jpg";
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  onJoinWaitlist: () => void;
+}
+
+export const HeroSection = ({ onJoinWaitlist }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -52,16 +56,20 @@ export const HeroSection = () => {
               variant="hero" 
               size="lg"
               className="group px-8 py-6 text-lg"
+              asChild
             >
-              <Eye className="w-5 h-5 mr-2" />
-              Book a Demo
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <a href="https://cal.com/switchxr/15min" target="_blank" rel="noopener noreferrer">
+                <Eye className="w-5 h-5 mr-2" />
+                Book a Demo
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <Button 
               variant="glass" 
               size="lg"
               className="px-8 py-6 text-lg"
+              onClick={onJoinWaitlist}
             >
               Join Waitlist
             </Button>
