@@ -6,10 +6,10 @@ import xrEducationClassroom from "@/assets/xr-education-classroom.jpg";
 import xrEducationLab from "@/assets/xr-education-lab.jpg";
 import vrImage from "@/assets/vr image.webp";
 
-const SwitchEducation = () => {
+const LearnSpaces = () => {
   // Set page title and meta description
   useEffect(() => {
-    document.title = "Switch Education | Immersive Learning Experiences";
+    document.title = "LearnSpaces | XR Assisted Learning";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Transform education with XR virtual classrooms, immersive learning experiences, and interactive training solutions for students and professionals worldwide.');
@@ -94,9 +94,9 @@ const SwitchEducation = () => {
 
             {/* Main Headline */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              <span className="block text-foreground glow-text">Switch Education:</span>
+              <span className="block text-foreground glow-text">LearnSpaces:</span>
               <span className="block gradient-xr bg-clip-text text-transparent animate-gradient">
-                Learning Without Limits
+                XR Assisted Learning
               </span>
             </h1>
 
@@ -108,17 +108,31 @@ const SwitchEducation = () => {
               <span className="text-xr-pink font-semibold">institutions</span> worldwide.
             </p>
 
-            {/* CTA Button */}
-            <div className="flex justify-center items-center pt-8">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <Button 
                 variant="hero" 
                 size="lg"
                 className="group px-8 py-6 text-lg"
-                onClick={scrollToSolutions}
+                asChild
               >
-                <Eye className="w-5 h-5 mr-2" />
-                Explore Solutions
+                <a href="https://cal.com/switchxr/15min" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Get a Free Workshop Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              
+              <Button 
+                variant="glass" 
+                size="lg"
+                className="px-8 py-6 text-lg"
+                asChild
+              >
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Download App
+                </a>
               </Button>
             </div>
 
@@ -249,7 +263,7 @@ const SwitchEducation = () => {
               Our Solution
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Learn Through <span className="gradient-xr bg-clip-text text-transparent">Immersive Experiences</span>
+              Learn Through <span className="gradient-xr bg-clip-text text-transparent">XR Assisted Experiences</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Transform education with XR virtual classrooms, interactive simulations, and collaborative learning 
@@ -420,11 +434,11 @@ const SwitchEducation = () => {
                   <Building2 className="w-4 h-4" />
                   K-12 Education
                 </div>
-                <h3 className="text-3xl font-bold text-foreground mb-6">
-                  <span className="gradient-xr bg-clip-text text-transparent">LearnSpace Labs</span> for Schools
-                </h3>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                <span className="gradient-xr bg-clip-text text-transparent">LearnSpaces Labs</span> for Schools
+              </h3>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Transform your school with dedicated LearnSpace Labs - immersive XR learning environments 
+                  Transform your school with dedicated LearnSpaces Labs - immersive XR learning environments 
                   that bring subjects to life and engage students like never before.
                 </p>
               </div>
@@ -485,7 +499,7 @@ const SwitchEducation = () => {
                       </li>
                       <li className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span>LearnSpace platform access</span>
+                        <span>LearnSpaces platform access</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -544,11 +558,11 @@ const SwitchEducation = () => {
                 Mobile Learning
               </div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Download <span className="gradient-xr bg-clip-text text-transparent">LearnSpace App</span>
+                Download <span className="gradient-xr bg-clip-text text-transparent">LearnSpaces App</span>
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
                 Take immersive learning with you anywhere. Experience XR education on your mobile device 
-                with our dedicated LearnSpace application.
+                with our dedicated LearnSpaces application.
               </p>
               
               <div className="flex justify-center items-center mb-8">
@@ -560,7 +574,7 @@ const SwitchEducation = () => {
                 >
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <ArrowRight className="w-5 h-5 mr-3" />
-                    Download LearnSpace App
+                    Download LearnSpaces App
                     <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
@@ -636,7 +650,7 @@ const SwitchEducation = () => {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="glass-card p-12 lg:p-16">
             <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-              Partner with Switch Education to Shape the{" "}
+              Partner with LearnSpaces to Shape the{" "}
               <span className="gradient-xr bg-clip-text text-transparent">
                 Future of Learning
               </span>
@@ -715,4 +729,4 @@ const SwitchEducation = () => {
   );
 };
 
-export default SwitchEducation;
+export default LearnSpaces;
