@@ -179,27 +179,6 @@ const SwitchEducation = () => {
 
             {/* Supporting Graphics */}
             <div className="space-y-8">
-              {/* Hero Images */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="glass-card p-4 hover:scale-105 transition-transform">
-                  <img 
-                    src={xrEducationClassroom} 
-                    alt="Virtual XR classroom with students learning in immersive environment"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="font-semibold text-foreground mb-2">Virtual Classrooms</h3>
-                  <p className="text-sm text-muted-foreground">Immersive learning environments</p>
-                </div>
-                <div className="glass-card p-4 hover:scale-105 transition-transform">
-                  <img 
-                    src={xrEducationLab} 
-                    alt="Students collaborating in virtual laboratory simulation"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="font-semibold text-foreground mb-2">Interactive Simulations</h3>
-                  <p className="text-sm text-muted-foreground">Hands-on virtual experiments</p>
-                </div>
-              </div>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center hover:scale-105 transition-transform">
@@ -251,6 +230,28 @@ const SwitchEducation = () => {
               Transform education with XR virtual classrooms, interactive simulations, and collaborative learning 
               environments that engage students and improve learning outcomes.
             </p>
+          </div>
+
+          {/* Hero Images */}
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <img 
+                src={xrEducationClassroom} 
+                alt="Virtual XR classroom with students learning in immersive environment"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 className="font-semibold text-foreground mb-2">Virtual Classrooms</h3>
+              <p className="text-sm text-muted-foreground">Immersive learning environments</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <img 
+                src={xrEducationLab} 
+                alt="Students collaborating in virtual laboratory simulation"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 className="font-semibold text-foreground mb-2">Interactive Simulations</h3>
+              <p className="text-sm text-muted-foreground">Hands-on virtual experiments</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

@@ -179,27 +179,6 @@ const SwitchDefence = () => {
 
             {/* Supporting Graphics */}
             <div className="space-y-8">
-              {/* Hero Images */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="glass-card p-4 hover:scale-105 transition-transform">
-                  <img 
-                    src={xrDefenceTraining} 
-                    alt="Military personnel in tactical XR training simulation"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="font-semibold text-foreground mb-2">Tactical Training</h3>
-                  <p className="text-sm text-muted-foreground">Secure military simulations</p>
-                </div>
-                <div className="glass-card p-4 hover:scale-105 transition-transform">
-                  <img 
-                    src={xrDefenceSimulation} 
-                    alt="Soldiers using XR headsets for secure tactical simulation"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="font-semibold text-foreground mb-2">Command Centers</h3>
-                  <p className="text-sm text-muted-foreground">Virtual operations environment</p>
-                </div>
-              </div>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center hover:scale-105 transition-transform">
@@ -251,6 +230,28 @@ const SwitchDefence = () => {
               Transform military training with secure XR simulations, tactical environments, and 
               classified training modules that ensure mission readiness without risk.
             </p>
+          </div>
+
+          {/* Hero Images */}
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <img 
+                src={xrDefenceTraining} 
+                alt="Military personnel in tactical XR training simulation"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 className="font-semibold text-foreground mb-2">Tactical Training</h3>
+              <p className="text-sm text-muted-foreground">Secure military simulations</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <img 
+                src={xrDefenceSimulation} 
+                alt="Soldiers using XR headsets for secure tactical simulation"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 className="font-semibold text-foreground mb-2">Command Centers</h3>
+              <p className="text-sm text-muted-foreground">Virtual operations environment</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
