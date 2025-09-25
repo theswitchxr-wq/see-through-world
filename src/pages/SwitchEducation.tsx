@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { ArrowRight, GraduationCap, Eye, Users, MapPin, Calendar, Mail, CheckCircle, AlertTriangle, Zap, Globe, Shield, BookOpen, Brain, Award } from "lucide-react";
+import xrEducationClassroom from "@/assets/xr-education-classroom.jpg";
+import xrEducationLab from "@/assets/xr-education-lab.jpg";
 
 const SwitchEducation = () => {
   // Set page title and meta description
@@ -177,6 +179,28 @@ const SwitchEducation = () => {
 
             {/* Supporting Graphics */}
             <div className="space-y-8">
+              {/* Hero Images */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="glass-card p-4 hover:scale-105 transition-transform">
+                  <img 
+                    src={xrEducationClassroom} 
+                    alt="Virtual XR classroom with students learning in immersive environment"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="font-semibold text-foreground mb-2">Virtual Classrooms</h3>
+                  <p className="text-sm text-muted-foreground">Immersive learning environments</p>
+                </div>
+                <div className="glass-card p-4 hover:scale-105 transition-transform">
+                  <img 
+                    src={xrEducationLab} 
+                    alt="Students collaborating in virtual laboratory simulation"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="font-semibold text-foreground mb-2">Interactive Simulations</h3>
+                  <p className="text-sm text-muted-foreground">Hands-on virtual experiments</p>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center hover:scale-105 transition-transform">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-destructive/20 flex items-center justify-center">

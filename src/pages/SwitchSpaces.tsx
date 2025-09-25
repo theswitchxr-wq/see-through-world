@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { ArrowRight, Building2, Eye, Users, MapPin, Calendar, Mail, CheckCircle, AlertTriangle, Zap, Globe, Shield } from "lucide-react";
+import xrSpacesApartment from "@/assets/xr-spaces-apartment.jpg";
+import xrSpacesSalesCenter from "@/assets/xr-spaces-sales-center.jpg";
 
 const SwitchSpaces = () => {
   // Set page title and meta description
@@ -176,6 +178,28 @@ const SwitchSpaces = () => {
 
             {/* Supporting Graphics */}
             <div className="space-y-8">
+              {/* Hero Images */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="glass-card p-4 hover:scale-105 transition-transform">
+                  <img 
+                    src={xrSpacesApartment} 
+                    alt="Modern luxury apartment with XR visualization overlay"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="font-semibold text-foreground mb-2">Virtual Property Tours</h3>
+                  <p className="text-sm text-muted-foreground">Experience before you buy</p>
+                </div>
+                <div className="glass-card p-4 hover:scale-105 transition-transform">
+                  <img 
+                    src={xrSpacesSalesCenter} 
+                    alt="Real estate sales center with XR technology showcase"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <h3 className="font-semibold text-foreground mb-2">Immersive Sales Centers</h3>
+                  <p className="text-sm text-muted-foreground">Interactive property showcases</p>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card p-6 text-center hover:scale-105 transition-transform">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-destructive/20 flex items-center justify-center">
