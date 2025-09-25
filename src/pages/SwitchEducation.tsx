@@ -311,6 +311,65 @@ const SwitchEducation = () => {
               </div>
             </div>
           </div>
+
+          {/* LearnXR App Download Section */}
+          <div className="glass-card p-12 text-center mt-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-xr-blue/10 text-xr-blue rounded-full text-sm font-medium mb-6">
+                <Brain className="w-4 h-4" />
+                Mobile Learning
+              </div>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                Download <span className="gradient-xr bg-clip-text text-transparent">LearnXR App</span>
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8">
+                Take immersive learning with you anywhere. Experience XR education on your mobile device 
+                with our dedicated LearnXR application.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  className="group px-8 py-4 text-lg"
+                  asChild
+                >
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ArrowRight className="w-5 h-5 mr-3" />
+                    Download for iOS
+                    <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                
+                <Button 
+                  variant="glass" 
+                  size="lg"
+                  className="px-8 py-4 text-lg"
+                  asChild
+                >
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ArrowRight className="w-5 h-5 mr-3" />
+                    Download for Android
+                  </a>
+                </Button>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 pt-8 border-t border-border/30">
+                <div className="p-4">
+                  <div className="text-2xl font-bold text-xr-blue mb-2">Offline Mode</div>
+                  <div className="text-sm text-muted-foreground">Learn without internet connection</div>
+                </div>
+                <div className="p-4">
+                  <div className="text-2xl font-bold text-xr-purple mb-2">AR Support</div>
+                  <div className="text-sm text-muted-foreground">Augmented reality features</div>
+                </div>
+                <div className="p-4">
+                  <div className="text-2xl font-bold text-xr-pink mb-2">Progress Sync</div>
+                  <div className="text-sm text-muted-foreground">Cross-device synchronization</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
