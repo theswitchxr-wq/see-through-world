@@ -76,6 +76,8 @@ const SwitchDefence = () => {
           <div className="absolute top-20 left-20 w-32 h-32 rounded-full gradient-xr opacity-20 animate-float" />
           <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full gradient-hero opacity-10 animate-float" style={{ animationDelay: "2s" }} />
           <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-xr-cyan/20 animate-float" style={{ animationDelay: "4s" }} />
+          <div className="absolute top-1/4 right-1/4 w-16 h-16 rounded-full bg-red-500/15 animate-float" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute bottom-1/4 left-1/2 w-20 h-20 rounded-full bg-blue-500/15 animate-float" style={{ animationDelay: "2.5s" }} />
         </div>
 
         {/* Hero Content */}
@@ -254,6 +256,40 @@ const SwitchDefence = () => {
             </div>
           </div>
 
+          {/* Additional Defence Images */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Target className="w-16 h-16 text-red-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Combat Training</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Combat Simulations</h3>
+              <p className="text-sm text-muted-foreground">Realistic battlefield scenarios</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Shield className="w-16 h-16 text-blue-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Secure Network</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Secure Infrastructure</h3>
+              <p className="text-sm text-muted-foreground">Military-grade security protocols</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Users className="w-16 h-16 text-green-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Team Training</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Squad Coordination</h3>
+              <p className="text-sm text-muted-foreground">Multi-soldier training exercises</p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {defenceFeatures.map((feature, index) => {
               const Icon = feature.icon;
@@ -283,6 +319,47 @@ const SwitchDefence = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Technology Showcase */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-red-500/20">
+                  <Target className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Advanced Simulation Engine</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                State-of-the-art physics simulation and AI-driven scenarios provide 
+                realistic training environments that adapt to different skill levels.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-blue-500/20">
+                  <Lock className="w-8 h-8 text-blue-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Military-Grade Security</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                End-to-end encryption, secure authentication, and compliance with 
+                military security standards ensure complete operational security.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
+                <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+              </div>
+            </div>
           </div>
 
           {/* Security Features */}

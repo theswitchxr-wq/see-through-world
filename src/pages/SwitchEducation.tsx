@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
-import { ArrowRight, GraduationCap, Eye, Users, MapPin, Calendar, Mail, CheckCircle, AlertTriangle, Zap, Globe, Shield, BookOpen, Brain, Award } from "lucide-react";
+import { ArrowRight, GraduationCap, Eye, Users, MapPin, Calendar, Mail, CheckCircle, AlertTriangle, Zap, Globe, Shield, BookOpen, Brain, Award, Building2 } from "lucide-react";
 import xrEducationClassroom from "@/assets/xr-education-classroom.jpg";
 import xrEducationLab from "@/assets/xr-education-lab.jpg";
+import vrImage from "@/assets/vr image.webp";
 
 const SwitchEducation = () => {
   // Set page title and meta description
@@ -68,7 +69,9 @@ const SwitchEducation = () => {
         {/* Background with subtle immersive visual */}
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-gradient-to-br from-background via-surface to-background" />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+          {/* VR Image Background */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5" style={{ backgroundImage: `url(${vrImage})` }} />
+          <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
         </div>
 
         {/* Animated Background Elements */}
@@ -76,6 +79,8 @@ const SwitchEducation = () => {
           <div className="absolute top-20 left-20 w-32 h-32 rounded-full gradient-xr opacity-20 animate-float" />
           <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full gradient-hero opacity-10 animate-float" style={{ animationDelay: "2s" }} />
           <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-xr-cyan/20 animate-float" style={{ animationDelay: "4s" }} />
+          <div className="absolute top-1/3 right-1/3 w-20 h-20 rounded-full bg-xr-purple/15 animate-float" style={{ animationDelay: "1s" }} />
+          <div className="absolute bottom-1/3 left-1/3 w-28 h-28 rounded-full bg-xr-pink/15 animate-float" style={{ animationDelay: "3s" }} />
         </div>
 
         {/* Hero Content */}
@@ -133,6 +138,26 @@ const SwitchEducation = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
           <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce" />
+          </div>
+        </div>
+      </section>
+
+      {/* VR Image Showcase - First Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <img 
+              src={vrImage} 
+              alt="Students experiencing immersive VR education with Meta Quest headsets"
+              className="w-full h-[50vh] min-h-[500px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 flex items-center justify-center text-center">
+              <div className="text-white px-8">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Immersive VR Learning Experience</h2>
+                <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">Experience education like never before with cutting-edge VR technology that brings learning to life</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -254,6 +279,40 @@ const SwitchEducation = () => {
             </div>
           </div>
 
+          {/* Additional Education Images */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-xr-blue/20 to-xr-purple/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Brain className="w-16 h-16 text-xr-blue mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">AR Learning</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Augmented Reality</h3>
+              <p className="text-sm text-muted-foreground">Interactive AR learning experiences</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-xr-purple/20 to-xr-pink/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Users className="w-16 h-16 text-xr-purple mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Group Study</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Collaborative Learning</h3>
+              <p className="text-sm text-muted-foreground">Multi-user study sessions</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Award className="w-16 h-16 text-xr-pink mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Certification</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Skill Assessment</h3>
+              <p className="text-sm text-muted-foreground">Real-time progress tracking</p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {educationFeatures.map((feature, index) => {
               const Icon = feature.icon;
@@ -312,7 +371,172 @@ const SwitchEducation = () => {
             </div>
           </div>
 
-          {/* LearnXR App Download Section */}
+          {/* Technology Showcase */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-xr-blue/20">
+                  <Zap className="w-8 h-8 text-xr-blue" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Real-time Collaboration</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Students and teachers can interact in real-time within virtual classrooms, 
+                sharing knowledge and collaborating on projects seamlessly.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-xr-blue"></div>
+                <div className="w-3 h-3 rounded-full bg-xr-purple"></div>
+                <div className="w-3 h-3 rounded-full bg-xr-pink"></div>
+                <div className="w-3 h-3 rounded-full bg-xr-cyan"></div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-xr-purple/20">
+                  <Shield className="w-8 h-8 text-xr-purple" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Secure Learning Environment</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced security protocols ensure student privacy and data protection 
+                while maintaining an open, collaborative learning atmosphere.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* LearnSpace Labs for K-12 Schools */}
+          <div className="glass-card p-12 mb-16">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-xr-purple/10 text-xr-purple rounded-full text-sm font-medium mb-6">
+                  <Building2 className="w-4 h-4" />
+                  K-12 Education
+                </div>
+                <h3 className="text-3xl font-bold text-foreground mb-6">
+                  <span className="gradient-xr bg-clip-text text-transparent">LearnSpace Labs</span> for Schools
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Transform your school with dedicated LearnSpace Labs - immersive XR learning environments 
+                  that bring subjects to life and engage students like never before.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-xr-blue/20 flex-shrink-0">
+                      <BookOpen className="w-6 h-6 text-xr-blue" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Dedicated Learning Spaces</h4>
+                      <p className="text-muted-foreground">
+                        Complete XR lab setups with Meta Quest headsets, interactive displays, and 
+                        collaborative learning stations for up to 30 students.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-xr-purple/20 flex-shrink-0">
+                      <Brain className="w-6 h-6 text-xr-purple" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Curriculum Integration</h4>
+                      <p className="text-muted-foreground">
+                        Pre-built lesson plans aligned with national standards for Science, History, 
+                        Geography, and STEM subjects across all grade levels.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-xr-pink/20 flex-shrink-0">
+                      <Users className="w-6 h-6 text-xr-pink" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Teacher Training & Support</h4>
+                      <p className="text-muted-foreground">
+                        Comprehensive training programs for educators, ongoing technical support, 
+                        and lesson plan customization assistance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="glass-card p-6">
+                    <h4 className="text-lg font-semibold text-foreground mb-4">Lab Package Includes:</h4>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>15-30 Meta Quest 3 headsets</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>Interactive whiteboard integration</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>LearnSpace platform access</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>Curriculum-aligned content library</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>Teacher dashboard & analytics</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span>Setup, training & ongoing support</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="glass-card p-6 text-center">
+                  <div className="text-3xl font-bold text-xr-blue mb-2">95%</div>
+                  <div className="text-sm text-muted-foreground">Student Engagement Increase</div>
+                </div>
+                <div className="glass-card p-6 text-center">
+                  <div className="text-3xl font-bold text-xr-purple mb-2">40%</div>
+                  <div className="text-sm text-muted-foreground">Improved Test Scores</div>
+                </div>
+                <div className="glass-card p-6 text-center">
+                  <div className="text-3xl font-bold text-xr-pink mb-2">85%</div>
+                  <div className="text-sm text-muted-foreground">Teacher Satisfaction</div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  className="group px-8 py-4 text-lg"
+                  asChild
+                >
+                  <a href="mailto:teleport@theswitch.life">
+                    <Calendar className="w-5 h-5 mr-3" />
+                    Request School Demo
+                    <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* LearnSpace App Download Section */}
           <div className="glass-card p-12 text-center mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-xr-blue/10 text-xr-blue rounded-full text-sm font-medium mb-6">
@@ -320,14 +544,14 @@ const SwitchEducation = () => {
                 Mobile Learning
               </div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Download <span className="gradient-xr bg-clip-text text-transparent">LearnXR App</span>
+                Download <span className="gradient-xr bg-clip-text text-transparent">LearnSpace App</span>
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
                 Take immersive learning with you anywhere. Experience XR education on your mobile device 
-                with our dedicated LearnXR application.
+                with our dedicated LearnSpace application.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex justify-center items-center mb-8">
                 <Button 
                   variant="hero" 
                   size="lg"
@@ -336,20 +560,8 @@ const SwitchEducation = () => {
                 >
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <ArrowRight className="w-5 h-5 mr-3" />
-                    Download for iOS
+                    Download LearnSpace App
                     <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                
-                <Button 
-                  variant="glass" 
-                  size="lg"
-                  className="px-8 py-4 text-lg"
-                  asChild
-                >
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ArrowRight className="w-5 h-5 mr-3" />
-                    Download for Android
                   </a>
                 </Button>
               </div>

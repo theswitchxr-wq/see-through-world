@@ -69,6 +69,8 @@ const SwitchSpaces = () => {
           <div className="absolute top-20 left-20 w-32 h-32 rounded-full gradient-xr opacity-20 animate-float" />
           <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full gradient-hero opacity-10 animate-float" style={{ animationDelay: "2s" }} />
           <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-xr-cyan/20 animate-float" style={{ animationDelay: "4s" }} />
+          <div className="absolute top-1/3 right-1/5 w-18 h-18 rounded-full bg-amber-500/15 animate-float" style={{ animationDelay: "1.2s" }} />
+          <div className="absolute bottom-1/3 left-1/5 w-22 h-22 rounded-full bg-emerald-500/15 animate-float" style={{ animationDelay: "3.2s" }} />
         </div>
 
         {/* Hero Content */}
@@ -253,6 +255,40 @@ const SwitchSpaces = () => {
             </div>
           </div>
 
+          {/* Additional Real Estate Images */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Building2 className="w-16 h-16 text-amber-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Luxury Villas</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Premium Properties</h3>
+              <p className="text-sm text-muted-foreground">High-end villa experiences</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Eye className="w-16 h-16 text-emerald-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Virtual Staging</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Virtual Staging</h3>
+              <p className="text-sm text-muted-foreground">Furnished property previews</p>
+            </div>
+            <div className="glass-card p-4 hover:scale-105 transition-transform">
+              <div className="w-full h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <Users className="w-16 h-16 text-purple-500 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Family Tours</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Family Viewings</h3>
+              <p className="text-sm text-muted-foreground">Collaborative property exploration</p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {realEstateFeatures.map((feature, index) => {
               const Icon = feature.icon;
@@ -282,6 +318,47 @@ const SwitchSpaces = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Technology Showcase */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-amber-500/20">
+                  <Eye className="w-8 h-8 text-amber-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Photorealistic Rendering</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced ray-tracing and lighting technology creates stunning, 
+                photorealistic property visualizations that look exactly like the real thing.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-2xl bg-emerald-500/20">
+                  <Users className="w-8 h-8 text-emerald-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">Multi-User Experiences</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Family members, friends, and real estate agents can explore properties 
+                together in real-time, making collaborative decision-making seamless.
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+                <div className="w-3 h-3 rounded-full bg-teal-500"></div>
+                <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+              </div>
+            </div>
           </div>
 
           {/* Technology Benefits */}
