@@ -499,7 +499,7 @@ const LearnSpaces = () => {
                   <img 
                     src={vrImage} 
                     alt="Students experiencing immersive VR education"
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -531,7 +531,7 @@ const LearnSpaces = () => {
                   <img 
                     src={xrEducationLab} 
                     alt="Students collaborating in virtual laboratory simulation"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
