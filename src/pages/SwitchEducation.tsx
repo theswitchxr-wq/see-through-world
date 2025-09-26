@@ -5,6 +5,8 @@ import { ArrowRight, GraduationCap, Eye, Users, MapPin, Calendar, Mail, CheckCir
 import xrEducationClassroom from "@/assets/xr-education-classroom.jpg";
 import xrEducationLab from "@/assets/xr-education-lab.jpg";
 import vrImage from "@/assets/vr image.webp";
+import lxrnImage from "@/assets/lxrn5-BRIVqSAU.png";
+import vrImg3 from "@/assets/vr-img3-D5dlaqXP.png";
 
 const LearnSpaces = () => {
   // Set page title and meta description
@@ -159,17 +161,17 @@ const LearnSpaces = () => {
       {/* VR Image Showcase - First Section */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
             <img 
               src={vrImage} 
               alt="Students experiencing immersive VR education with Meta Quest headsets"
-              className="w-full h-[50vh] min-h-[500px] object-cover"
+              className="w-full h-[50vh] min-h-[500px] object-cover hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             <div className="absolute inset-0 flex items-center justify-center text-center">
-              <div className="text-white px-8">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Immersive VR Learning Experience</h2>
-                <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">Experience education like never before with cutting-edge VR technology that brings learning to life</p>
+              <div className="text-white px-8 animate-fade-in">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">Immersive VR Learning Experience</h2>
+                <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed animate-slide-up-delayed">Experience education like never before with cutting-edge VR technology that brings learning to life</p>
               </div>
             </div>
           </div>
@@ -293,37 +295,65 @@ const LearnSpaces = () => {
             </div>
           </div>
 
-          {/* Additional Education Images */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-xr-blue/20 to-xr-purple/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Brain className="w-16 h-16 text-xr-blue mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">AR Learning</p>
+          {/* Creative Image Showcase */}
+          <div className="relative mb-16">
+            {/* Parallax-style layered images */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Left side - Floating image with overlay */}
+              <div className="relative group">
+                <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-xr-purple/30 to-xr-blue/30 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src={lxrnImage} 
+                    alt="Students using XR headsets for immersive learning"
+                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="text-2xl font-bold mb-2">Immersive XR Learning</h3>
+                    <p className="text-sm opacity-90">Experience education through cutting-edge VR technology</p>
+                  </div>
                 </div>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Augmented Reality</h3>
-              <p className="text-sm text-muted-foreground">Interactive AR learning experiences</p>
-            </div>
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-xr-purple/20 to-xr-pink/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Users className="w-16 h-16 text-xr-purple mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Group Study</p>
+
+              {/* Right side - Stacked cards with image */}
+              <div className="space-y-6">
+                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-xr-blue/20">
+                      <Brain className="w-6 h-6 text-xr-blue" />
+                    </div>
+                    <h3 className="text-xl font-bold">AI-Powered Learning</h3>
+                  </div>
+                  <p className="text-muted-foreground">Personalized education paths powered by artificial intelligence</p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 -right-2 w-full h-full bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-xl transform -rotate-2 group-hover:-rotate-3 transition-transform duration-300"></div>
+                  <div className="relative z-10 overflow-hidden rounded-xl shadow-lg">
+                    <img 
+                      src={vrImg3} 
+                      alt="Virtual reality classroom with students collaborating"
+                      className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h4 className="font-semibold">Collaborative VR Spaces</h4>
+                      <p className="text-xs opacity-90">Multi-user virtual classrooms</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-xr-pink/20">
+                      <Award className="w-6 h-6 text-xr-pink" />
+                    </div>
+                    <h3 className="text-xl font-bold">Real-time Assessment</h3>
+                  </div>
+                  <p className="text-muted-foreground">Instant feedback and progress tracking in immersive environments</p>
                 </div>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Collaborative Learning</h3>
-              <p className="text-sm text-muted-foreground">Multi-user study sessions</p>
-            </div>
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Award className="w-16 h-16 text-xr-pink mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Certification</p>
-                </div>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Skill Assessment</h3>
-              <p className="text-sm text-muted-foreground">Real-time progress tracking</p>
             </div>
           </div>
 
@@ -385,43 +415,150 @@ const LearnSpaces = () => {
             </div>
           </div>
 
-          {/* Technology Showcase */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-2xl bg-xr-blue/20">
-                  <Zap className="w-8 h-8 text-xr-blue" />
+          {/* Creative Floating Technology Showcase */}
+          <div className="relative mb-16 overflow-hidden">
+            {/* Background floating elements */}
+            <div className="absolute inset-0">
+              <div className="absolute top-10 left-10 w-20 h-20 bg-xr-blue/10 rounded-full animate-float"></div>
+              <div className="absolute top-20 right-20 w-16 h-16 bg-xr-purple/10 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
+              <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-xr-pink/10 rounded-full animate-float" style={{ animationDelay: "2s" }}></div>
+            </div>
+
+            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left - Creative image integration */}
+              <div className="space-y-8">
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-xr-blue/20 to-xr-purple/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative glass-card p-8 hover:scale-105 transition-all duration-500">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="p-4 rounded-2xl bg-gradient-to-br from-xr-blue/30 to-xr-purple/30">
+                        <Zap className="w-8 h-8 text-xr-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground">Real-time Collaboration</h3>
+                    </div>
+                    <p className="text-muted-foreground mb-6">
+                      Students and teachers can interact in real-time within virtual classrooms, 
+                      sharing knowledge and collaborating on projects seamlessly.
+                    </p>
+                    <div className="flex gap-2">
+                      <div className="w-4 h-4 rounded-full bg-xr-blue animate-pulse"></div>
+                      <div className="w-4 h-4 rounded-full bg-xr-purple animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                      <div className="w-4 h-4 rounded-full bg-xr-pink animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                      <div className="w-4 h-4 rounded-full bg-xr-cyan animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Real-time Collaboration</h3>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Students and teachers can interact in real-time within virtual classrooms, 
-                sharing knowledge and collaborating on projects seamlessly.
-              </p>
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-xr-blue"></div>
-                <div className="w-3 h-3 rounded-full bg-xr-purple"></div>
-                <div className="w-3 h-3 rounded-full bg-xr-pink"></div>
-                <div className="w-3 h-3 rounded-full bg-xr-cyan"></div>
+
+              {/* Right - Interactive showcase */}
+              <div className="relative">
+                <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-3xl transform rotate-6 group-hover:rotate-12 transition-transform duration-700"></div>
+                <div className="relative z-10 overflow-hidden rounded-3xl shadow-2xl group">
+                  <div className="w-full h-96 bg-gradient-to-br from-xr-pink/40 to-xr-cyan/40 rounded-3xl flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="p-4 rounded-2xl bg-white/20 backdrop-blur-sm mb-4">
+                        <Shield className="w-16 h-16 mx-auto" />
+                      </div>
+                      <h4 className="text-2xl font-bold mb-2">Advanced XR Technology</h4>
+                      <p className="text-sm opacity-90">Next-generation immersive learning</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-8 left-8 right-8 text-white">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm">
+                        <Shield className="w-5 h-5" />
+                      </div>
+                      <span className="text-sm font-medium">Secure Learning Environment</span>
+                    </div>
+                    <h4 className="text-2xl font-bold mb-2">Enterprise-Grade Security</h4>
+                    <p className="text-sm opacity-90">Advanced protection for educational data</p>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="glass-card p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-2xl bg-xr-purple/20">
-                  <Shield className="w-8 h-8 text-xr-purple" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">Secure Learning Environment</h3>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Advanced security protocols ensure student privacy and data protection 
-                while maintaining an open, collaborative learning atmosphere.
+          </div>
+
+          {/* Creative Mosaic Image Gallery */}
+          <div className="relative mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Experience the Future of Learning
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                See how students are already transforming their education through immersive XR experiences
               </p>
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+            </div>
+
+            {/* Mosaic Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+              {/* Large featured image */}
+              <div className="md:col-span-2 lg:col-span-2 row-span-2 relative group">
+                <div className="absolute -inset-2 bg-gradient-to-br from-xr-purple/30 to-xr-blue/30 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
+                <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl h-96">
+                  <img 
+                    src={vrImage} 
+                    alt="Students experiencing immersive VR education"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 className="text-2xl font-bold mb-2">Immersive Learning Labs</h4>
+                    <p className="text-sm opacity-90">Students exploring virtual worlds for enhanced education</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medium image with overlay */}
+              <div className="md:col-span-1 lg:col-span-1 relative group">
+                <div className="absolute -inset-1 bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative z-10 overflow-hidden rounded-xl shadow-lg h-48">
+                  <div className="w-full h-full bg-gradient-to-br from-xr-pink/30 to-xr-cyan/30 rounded-xl flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <Eye className="w-12 h-12 mx-auto mb-2 animate-pulse" />
+                      <h5 className="font-semibold text-sm">XR Technology</h5>
+                      <p className="text-xs opacity-90">Advanced learning tools</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+              </div>
+
+              {/* Small image with floating effect */}
+              <div className="md:col-span-1 lg:col-span-1 relative group">
+                <div className="absolute -inset-1 bg-gradient-to-br from-xr-blue/20 to-xr-purple/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative z-10 overflow-hidden rounded-xl shadow-lg h-48">
+                  <div className="w-full h-full bg-gradient-to-br from-xr-blue/30 to-xr-purple/30 rounded-xl flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <Users className="w-12 h-12 mx-auto mb-2 animate-bounce" />
+                      <h5 className="font-semibold text-sm">Collaborative Learning</h5>
+                      <p className="text-xs opacity-90">Team-based VR experiences</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+              </div>
+
+              {/* Feature cards */}
+              <div className="md:col-span-3 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-lg bg-xr-blue/20">
+                      <Brain className="w-5 h-5 text-xr-blue" />
+                    </div>
+                    <h4 className="font-bold">AI-Powered Learning</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Personalized education paths</p>
+                </div>
+                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-lg bg-xr-pink/20">
+                      <Award className="w-5 h-5 text-xr-pink" />
+                    </div>
+                    <h4 className="font-bold">Real-time Assessment</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Instant progress tracking</p>
+                </div>
               </div>
             </div>
           </div>

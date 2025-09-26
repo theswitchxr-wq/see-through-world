@@ -256,37 +256,76 @@ const SwitchDefence = () => {
             </div>
           </div>
 
-          {/* Additional Defence Images */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Target className="w-16 h-16 text-red-500 mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Combat Training</p>
-                </div>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Combat Simulations</h3>
-              <p className="text-sm text-muted-foreground">Realistic battlefield scenarios</p>
+          {/* Creative Defence Showcase */}
+          <div className="relative mb-16 overflow-hidden">
+            {/* Background floating elements */}
+            <div className="absolute inset-0">
+              <div className="absolute top-10 right-10 w-24 h-24 bg-red-500/10 rounded-full animate-float"></div>
+              <div className="absolute bottom-20 left-20 w-16 h-16 bg-blue-500/10 rounded-full animate-float" style={{ animationDelay: "1.5s" }}></div>
+              <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-green-500/10 rounded-full animate-float" style={{ animationDelay: "3s" }}></div>
             </div>
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Shield className="w-16 h-16 text-blue-500 mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Secure Network</p>
+
+            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left - Hero image with creative overlay */}
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-br from-red-500/30 to-orange-500/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="w-full h-80 bg-gradient-to-br from-red-500/40 to-orange-500/40 rounded-2xl flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <Target className="w-20 h-20 mx-auto mb-4 animate-pulse" />
+                      <h3 className="text-2xl font-bold mb-2">Advanced Combat Training</h3>
+                      <p className="text-lg opacity-90">Immersive battlefield simulations</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h4 className="text-xl font-bold mb-2">Tactical Excellence</h4>
+                    <p className="text-sm opacity-90">Realistic scenarios for enhanced military training</p>
+                  </div>
                 </div>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Secure Infrastructure</h3>
-              <p className="text-sm text-muted-foreground">Military-grade security protocols</p>
-            </div>
-            <div className="glass-card p-4 hover:scale-105 transition-transform">
-              <div className="w-full h-48 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <Users className="w-16 h-16 text-green-500 mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Team Training</p>
+
+              {/* Right - Stacked feature cards */}
+              <div className="space-y-6">
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                  <div className="relative z-10 glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 rounded-xl bg-blue-500/20">
+                        <Shield className="w-6 h-6 text-blue-500" />
+                      </div>
+                      <h3 className="text-xl font-bold">Secure Infrastructure</h3>
+                    </div>
+                    <p className="text-muted-foreground">Military-grade security protocols and encrypted communications</p>
+                  </div>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                  <div className="relative z-10 glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 rounded-xl bg-green-500/20">
+                        <Users className="w-6 h-6 text-green-500" />
+                      </div>
+                      <h3 className="text-xl font-bold">Squad Coordination</h3>
+                    </div>
+                    <p className="text-muted-foreground">Multi-soldier tactical training and communication systems</p>
+                  </div>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+                  <div className="relative z-10 glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 rounded-xl bg-purple-500/20">
+                        <Lock className="w-6 h-6 text-purple-500" />
+                      </div>
+                      <h3 className="text-xl font-bold">Classified Operations</h3>
+                    </div>
+                    <p className="text-muted-foreground">Secure training environments for sensitive missions</p>
+                  </div>
                 </div>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Squad Coordination</h3>
-              <p className="text-sm text-muted-foreground">Multi-soldier training exercises</p>
             </div>
           </div>
 
