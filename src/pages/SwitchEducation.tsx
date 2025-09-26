@@ -286,12 +286,12 @@ const LearnSpaces = () => {
             </div>
             <div className="glass-card p-4 hover:scale-105 transition-transform">
               <img 
-                src={xrEducationLab} 
-                alt="Students collaborating in virtual laboratory simulation"
+                src={vrImg3} 
+                alt="Virtual reality classroom with students collaborating"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              <h3 className="font-semibold text-foreground mb-2">Interactive Simulations</h3>
-              <p className="text-sm text-muted-foreground">Hands-on virtual experiments</p>
+              <h3 className="font-semibold text-foreground mb-2">Collaborative VR Spaces</h3>
+              <p className="text-sm text-muted-foreground">Multi-user virtual learning environments</p>
             </div>
           </div>
 
@@ -471,8 +471,8 @@ const LearnSpaces = () => {
                       </div>
                       <span className="text-sm font-medium">Secure Learning Environment</span>
                     </div>
-                    <h4 className="text-2xl font-bold mb-2">Enterprise-Grade Security</h4>
-                    <p className="text-sm opacity-90">Advanced protection for educational data</p>
+                    <h4 className="text-2xl font-bold mb-2">Advanced XR Technology</h4>
+                    <p className="text-sm opacity-90">Next-generation immersive learning platform</p>
                   </div>
                 </div>
               </div>
@@ -528,14 +528,16 @@ const LearnSpaces = () => {
               <div className="md:col-span-1 lg:col-span-1 relative group">
                 <div className="absolute -inset-1 bg-gradient-to-br from-xr-blue/20 to-xr-purple/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
                 <div className="relative z-10 overflow-hidden rounded-xl shadow-lg h-48">
-                  <div className="w-full h-full bg-gradient-to-br from-xr-blue/30 to-xr-purple/30 rounded-xl flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <Users className="w-12 h-12 mx-auto mb-2 animate-bounce" />
-                      <h5 className="font-semibold text-sm">Collaborative Learning</h5>
-                      <p className="text-xs opacity-90">Team-based VR experiences</p>
-                    </div>
-                  </div>
+                  <img 
+                    src={xrEducationLab} 
+                    alt="Students collaborating in virtual laboratory simulation"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h5 className="font-semibold text-sm">Interactive Simulations</h5>
+                    <p className="text-xs opacity-90">Hands-on virtual experiments</p>
+                  </div>
                 </div>
               </div>
 
