@@ -491,9 +491,9 @@ const LearnSpaces = () => {
             </div>
 
             {/* Mosaic Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {/* Large featured image */}
-              <div className="md:col-span-2 lg:col-span-2 row-span-2 relative group">
+              <div className="md:col-span-2 row-span-2 relative group">
                 <div className="absolute -inset-2 bg-gradient-to-br from-xr-purple/30 to-xr-blue/30 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
                 <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl h-96">
                   <img 
@@ -510,7 +510,7 @@ const LearnSpaces = () => {
               </div>
 
               {/* Medium image with overlay */}
-              <div className="md:col-span-1 lg:col-span-1 relative group">
+              <div className="md:col-span-1 relative group">
                 <div className="absolute -inset-1 bg-gradient-to-br from-xr-pink/20 to-xr-cyan/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
                 <div className="relative z-10 overflow-hidden rounded-xl shadow-lg h-48">
                   <div className="w-full h-full bg-gradient-to-br from-xr-pink/30 to-xr-cyan/30 rounded-xl flex items-center justify-center">
@@ -525,7 +525,7 @@ const LearnSpaces = () => {
               </div>
 
               {/* Small image with floating effect */}
-              <div className="md:col-span-1 lg:col-span-1 relative group">
+              <div className="md:col-span-1 relative group">
                 <div className="absolute -inset-1 bg-gradient-to-br from-xr-blue/20 to-xr-purple/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></div>
                 <div className="relative z-10 overflow-hidden rounded-xl shadow-lg h-48">
                   <img 
@@ -541,27 +541,6 @@ const LearnSpaces = () => {
                 </div>
               </div>
 
-              {/* Feature cards */}
-              <div className="md:col-span-3 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-lg bg-xr-blue/20">
-                      <Brain className="w-5 h-5 text-xr-blue" />
-                    </div>
-                    <h4 className="font-bold">AI-Powered Learning</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Personalized education paths</p>
-                </div>
-                <div className="glass-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-lg bg-xr-pink/20">
-                      <Award className="w-5 h-5 text-xr-pink" />
-                    </div>
-                    <h4 className="font-bold">Real-time Assessment</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Instant progress tracking</p>
-                </div>
-              </div>
             </div>
           </div>
 
